@@ -1,0 +1,115 @@
+// Template for Google Homepage
+@import "doodle-template";
+@import "animate";
+
+/* All animations done using animate.css */
+/* https://github.com/daneden/animate.css */
+
+/* Your Awesome Doodle */
+
+#stage {
+  background: linear-gradient(45deg, #678EA6, #D1CBBE, #D0C9B5);
+  height: 500px;
+  width: 500px;
+  border: black solid 1px;
+  position: relative;
+  overflow: hidden;
+  transform: rotate(-90deg);
+}
+
+.bg {
+  opacity: 0.15;
+}
+
+.bowie {
+  position: absolute;
+  width: 80%;
+  top: -27%;
+  left: 8%;
+  animation: bounceInDown 1s .5s both;
+}
+
+.card {
+  position: absolute;
+  bottom: 0;
+  animation: slideInUp 1s cubic-bezier(.74,.12,.2,.98) 1s 1 normal both;
+}
+
+//animation: name duration timing-function delay iteration-count direction fill-mode;
+
+.g1,
+.g2,
+.o1,
+.o2,
+.l,
+.e,{
+  position: absolute;
+  width: 6%;
+  animation: fadeIn, pulse;
+  animation-iteration-count: 1, infinite;
+  animation-duration: 1s, .7s;
+  animation-fill-mode: both; 
+}
+
+
+.underline {
+  position: absolute;
+  width: 32%;
+  bottom: 3%;
+  left: 8%;
+  animation: fadeIn 1s 2s both;
+}
+
+.g1 {
+  bottom: 5%;
+  left: 5%;
+  animation-delay: 2s, 3.2s;
+}
+
+.o1 {
+  bottom: 7%;
+  left: 11%;
+  animation-delay: 2s, 3.3s;
+}
+
+.o2 {
+  bottom: 9%;
+  left: 17%;
+  animation-delay: 2s, 3.4s;
+}
+
+.g2 {
+  bottom: 11.5%;
+  left: 22.5%;
+  animation-delay: 2s, 3.5s;
+}
+
+.l {
+  bottom: 13.4%;
+  left: 28.5%;
+  animation-delay: 2s, 3.6s;
+}
+
+.e {
+  width: 5%;
+  bottom: 15%;
+  left: 35%;
+  animation-delay: 2s, 3.7s;
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.08, 1.08, 1.08);
+    transform: scale3d(1.08, 1.08, 1.08);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
